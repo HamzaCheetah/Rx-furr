@@ -2101,7 +2101,7 @@ input[type='checkbox'] {
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  background-color:#FF4948;
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -2416,7 +2416,7 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
     column-gap: 2rem;
   }
 
@@ -2539,12 +2539,14 @@ input[type='checkbox'] {
   grid-area: icons;
   justify-self: end;
   padding-right: 0.8rem;
+  gap: 16px;
+
 }
 
 .header__icons .shopify-app-block {
   max-width: 4.4rem;
   max-height: 4.4rem;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .header__icon:not(.header__icon--summary),
@@ -2563,6 +2565,9 @@ input[type='checkbox'] {
 }
 
 .header__icon .svg-wrapper {
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+  color: #ffffff;
   width: 44px;
   height: 44px;
 }
@@ -2579,7 +2584,6 @@ input[type='checkbox'] {
 .header__icon .icon {
   height: 2rem;
   width: 2rem;
-  fill: none;
   vertical-align: middle;
 }
 
@@ -2836,10 +2840,10 @@ details[open] > .header__submenu {
   transition: text-decoration var(--duration-short) ease;
 }
 
-.header__menu-item:hover span {
+/* .header__menu-item:hover span {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
-}
+} */
 
 details[open] > .header__menu-item {
   text-decoration: underline;
@@ -2855,15 +2859,14 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  color: var(--primary-blue);
 }
 
-.header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
+.header__menu-item:hover {
+  background: #f3f5ff;
+  transition: background var(--duration-short) ease;
 }
-
+ 
 .header__submenu {
   transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
 }
