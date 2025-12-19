@@ -1,6 +1,29 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
+    <link
+  rel="preload"
+  href="https://cdn.shopify.com/s/files/1/0969/5910/3288/files/CatfilesRegular.woff2?v=1766150105"
+  as="font"
+  type="font/woff2"
+  crossorigin
+>
+
+<style>
+  @font-face {
+    font-family: 'Catfiles';
+    src: url('https://cdn.shopify.com/s/files/1/0969/5910/3288/files/CatfilesRegular.woff2?v=1766150105') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  p, span, div, ul, ol, li, a {
+    font-family: 'Catfiles', sans-serif !important;
+  }
+</style>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
