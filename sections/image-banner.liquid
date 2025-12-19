@@ -120,11 +120,23 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2
+           <h2
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }}
+              <span class="heading-part">
+                {{ block.settings.heading }}
+              </span>
+
+              {%- if block.settings.heading_image != blank -%}
+                <span class="heading-image">
+                  <img
+                    src="{{ block.settings.heading_image | image_url: width: 50 }}" alt="" loading="lazy" >
+                </span>
+              {%- endif -%}
+              <span class="heading-part">
+                {{ block.settings.heading_part_2 }}
+              </span>
             </h2>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -371,6 +383,16 @@
           "id": "heading",
           "default": "t:sections.image-banner.blocks.heading.settings.heading.default",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "heading_image",
+          "label": "Image inside heading"
+        },
+                {
+          "type": "text",
+          "id": "heading_part_2",
+          "label": "Heading second part"
         },
         {
           "type": "select",
