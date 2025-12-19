@@ -15,25 +15,27 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Cheetah fume latest products",
+            "heading": "Step Into  Healthier",
+            "heading_image": "shopify://shop_images/Image.png",
+            "heading_part_2": "Gut for Your Dog!",
             "heading_size": "h0"
           }
         },
         "text_bbNNti": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Made with Canine Specific Probiotics",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "SHOP NOW",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Learn More",
-            "button_link_2": "",
+            "button_label_2": "LEARN MORE",
+            "button_link_2": "shopify://blogs/news",
             "button_style_secondary_2": false
           }
         }
@@ -45,8 +47,8 @@
       ],
       "settings": {
         "image": "shopify://shop_images/BG.png",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
