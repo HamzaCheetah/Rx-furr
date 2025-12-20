@@ -1,0 +1,105 @@
+<section class="img-text-section">
+  <div class="page-width">
+    <div class="img-text-grid">
+
+      <!-- LEFT IMAGE -->
+      <div class="img-text-image">
+        {% if section.settings.image != blank %}
+          <img
+            src="{{ section.settings.image | image_url: width: 800 }}"
+            alt="{{ section.settings.heading_part_1 }}"
+            loading="lazy"
+          >
+        {% endif %}
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="img-text-content">
+       {% if section.settings.heading_1 != blank %}
+        <h2 class="custom-heading">
+            {{ section.settings.heading_1 }}
+            <span class="highlight">
+            {{ section.settings.heading_highlight }}
+            </span>
+            {{ section.settings.heading_2 }}
+        </h2>
+        {% endif %}
+
+
+        {% if section.settings.description != blank %}
+          <p class="img-text-description">
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
+
+        {% if section.blocks.size > 0 %}
+          <ul class="img-text-list">
+            {% for block in section.blocks %}
+              <li {{ block.shopify_attributes }}>
+                {{ block.settings.list_text }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- schema -%}
+{
+  "name": "Image with Text & List",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading – First Part",
+      "default": "WHY"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Heading – Highlighted Word",
+      "default": "CHOOSE"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading – Second Part",
+      "default": "RX FURR PROBIOTIC POWDER?"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Science and technology play a vital role in innovation and progress."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list_text",
+          "label": "List Text",
+          "default": "Sample list item"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Image with Text & List"
+    }
+  ]
+}
+{%- endschema -%}
