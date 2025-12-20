@@ -1,0 +1,145 @@
+<section class="pet-wellness {% if section.settings.enable_animation %}scroll-trigger animate--slide-in{% endif %}">
+  <div class="page-width">
+    
+    {% if section.settings.heading_1 != blank %}
+        <h2 class="pet-wellness__heading">
+            {{ section.settings.heading_1 }}
+            <span class="pet-wellness__highlight">
+            {{ section.settings.heading_highlight }}
+            </span>
+            {{ section.settings.heading_2 }}
+        </h2>
+
+    {% endif %}
+
+
+    {% if section.settings.subheading != blank %}
+      <p class="pet-wellness__subheading">
+        {{ section.settings.subheading }}
+      </p>
+    {% endif %}
+
+    <div class="pet-wellness__grid scroll-trigger animate--slide-in">
+      {% for block in section.blocks %}
+        <div class="pet-wellness__item">
+          
+          {% if block.settings.icon != blank %}
+            <div class="pet-wellness__icon">
+              <img 
+                src="{{ block.settings.icon | image_url: width: 80 }}" 
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy">
+            </div>
+          {% endif %}
+
+          <h3 class="pet-wellness__title">
+            {{ block.settings.title }}
+          </h3>
+
+          <p class="pet-wellness__text">
+            {{ block.settings.text }}
+          </p>
+
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.button_text != blank %}
+      <div class="pet-wellness__button-wrapper">
+        <a href="{{ section.settings.button_link }}" class="pet-wellness__button">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Pet Wellness Benefits",
+  "settings": [
+    {
+    "type": "text",
+    "id": "heading_1",
+    "label": "Heading – Part 1",
+    "default": "THE"
+    },
+    {
+    "type": "text",
+    "id": "heading_highlight",
+    "label": "Highlighted Word",
+    "default": "WELLNESS"
+    },
+    {
+    "type": "text",
+    "id": "heading_2",
+    "label": "Heading – Part 2",
+    "default": "BOOST YOUR PET DESERVES"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Give your pet the ultimate care with our science-backed probiotic formula."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Enable scroll animation",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Gut Health Support"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Promotes balanced digestion and reduces bloating."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Pet Wellness Benefits",
+      "blocks": [
+        { "type": "benefit" },
+        { "type": "benefit" },
+        { "type": "benefit" },
+        { "type": "benefit" },
+        { "type": "benefit" },
+        { "type": "benefit" }
+      ]
+    }
+  ]
+}
+{% endschema %}

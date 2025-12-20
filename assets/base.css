@@ -3753,3 +3753,125 @@ details-disclosure > details {
   }
 }
 /* custom image with text section ends  */
+
+/* pet-wellness section starts */
+.pet-wellness {
+  padding: 0 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.pet-wellness__heading {
+  font-size: 52px;
+  line-height: 70px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #202871;
+  padding: 0 220px;
+}
+
+.pet-wellness__highlight {
+  color: #ff4948;
+  display: inline-block;
+  margin: 0 6px;
+}
+.pet-wellness__subheading {
+  max-width: 680px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.pet-wellness__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.pet-wellness__icon img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+}
+
+.pet-wellness__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2a7a;
+  margin-bottom: 10px;
+}
+
+.pet-wellness__text {
+  font-size: 14px;
+  line-height: 26px;
+  color: #575757;
+font-family: 'inter', sans-sarif;
+}
+
+.pet-wellness__button-wrapper {
+  margin-top: 60px;
+}
+
+.pet-wellness__button {
+  display: inline-block;
+  padding: 20px 42px;
+  border-radius: 40px;
+  border: 1px solid #1f2a7a;
+  color: #1f2a7a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pet-wellness__button:hover {
+  background: #1f2a7a;
+  color: #ffffff;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .pet-wellness__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .pet-wellness__heading {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .pet-wellness {
+    padding: 60px 16px;
+  }
+
+  .pet-wellness__grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .pet-wellness__heading {
+    font-size: 28px;
+  }
+
+  .pet-wellness__subheading {
+    margin-bottom: 40px;
+  }
+}
+/* pet-wellness section ends */
+/* Smooth scroll animation tuning */
+.pet-wellness.animate--slide-in,
+.pet-wellness__item.animate--slide-in {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pet-wellness,
+  .pet-wellness__item {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
