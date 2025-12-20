@@ -1,0 +1,68 @@
+<section class="pet-gallery scroll-trigger animate--slide-in">
+  <div class="page-width">
+
+    <div class="pet-gallery__grid">
+
+      <!-- Left big image -->
+      <div class="pet-gallery__left scroll-trigger animate--slide-in">
+        {% if section.settings.image_left != blank %}
+          <img 
+            src="{{ section.settings.image_left | image_url: width: 900 }}"
+            alt="Pet lifestyle image"
+            loading="lazy">
+        {% endif %}
+      </div>
+
+      <!-- Right stacked images -->
+      <div class="pet-gallery__right">
+
+        <div class="pet-gallery__item scroll-trigger animate--slide-in">
+          {% if section.settings.image_top_right != blank %}
+            <img 
+              src="{{ section.settings.image_top_right | image_url: width: 600 }}"
+              alt="Pet lifestyle image"
+              loading="lazy">
+          {% endif %}
+        </div>
+
+        <div class="pet-gallery__item scroll-trigger animate--slide-in">
+          {% if section.settings.image_bottom_right != blank %}
+            <img 
+              src="{{ section.settings.image_bottom_right | image_url: width: 600 }}"
+              alt="Pet lifestyle image"
+              loading="lazy">
+          {% endif %}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Pet Lifestyle Gallery",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Left Image (Large)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_top_right",
+      "label": "Top Right Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_right",
+      "label": "Bottom Right Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pet Lifestyle Gallery"
+    }
+  ]
+} 
+{% endschema %}
