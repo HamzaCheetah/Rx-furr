@@ -92,10 +92,92 @@
         "heading_2": "RX FURR PROBIOTIC POWDER?",
         "description": "Rx Furr Probiotics support your pet’s digestion, immunity, and overall well-being. A simple daily addition to their diet for lasting benefits!"
       }
+    },
+    "pet_wellness_benefits_ifCV4a": {
+      "type": "pet-wellness-benefits",
+      "blocks": {
+        "benefit_kBB8bE": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/bacteria-svgrepo-com_1.png",
+            "title": "Gut Health Support",
+            "text": "Promotes balanced digestion, reducing gas, bloating, and discomfort for a happy, healthy pup."
+          }
+        },
+        "benefit_GUiYcX": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/stickynote.png",
+            "title": "Vet-Approved Formula",
+            "text": "Backed by science with canine-specific probiotics and prebiotic fiber for optimal gut health."
+          }
+        },
+        "benefit_HG6kQC": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/leaf-svgrepo-com_1.png",
+            "title": "Superfood Enriched",
+            "text": "Powered by pumpkin, ginger, and blueberries for firm stools, tummy relief, and overall wellness."
+          }
+        },
+        "benefit_ztLnPd": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/flash.png",
+            "title": "Maximum Potency",
+            "text": "Unlike soft chews, our powder retains its full effectiveness for superior digestive support."
+          }
+        },
+        "benefit_4EJRgG": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/trend-up.png",
+            "title": "Better Nutrient Absorption",
+            "text": "Packed with digestive enzymes to enhance digestion and nutrient uptake."
+          }
+        },
+        "benefit_3zCDGc": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shopify://shop_images/cup.png",
+            "title": "Tasty & Risk-Free",
+            "text": "Delicious chicken flavor your dog will love—plus a full money-back guarantee!"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_kBB8bE",
+        "benefit_GUiYcX",
+        "benefit_HG6kQC",
+        "benefit_ztLnPd",
+        "benefit_4EJRgG",
+        "benefit_3zCDGc"
+      ],
+      "name": "Pet Wellness Benefits",
+      "settings": {
+        "heading_1": "THE",
+        "heading_highlight": "WELLNESS",
+        "heading_2": "BOOST YOUR PET DESERVES",
+        "subheading": "Give your pet the ultimate care with our science-backed probiotic formula.",
+        "enable_animation": true,
+        "button_text": "Shop Now",
+        "button_link": ""
+      }
+    },
+    "pets_media_gallery_H8WFwP": {
+      "type": "pets-media-gallery",
+      "name": "Pet Lifestyle Gallery",
+      "settings": {
+        "image_left": "shopify://shop_images/Frame2121449895.png",
+        "image_top_right": "shopify://shop_images/Frame2121449896.png",
+        "image_bottom_right": "shopify://shop_images/PlaceholderImage3.png"
+      }
     }
   },
   "order": [
     "image_banner",
-    "custom_image_with_text_mWCpF4"
+    "custom_image_with_text_mWCpF4",
+    "pet_wellness_benefits_ifCV4a",
+    "pets_media_gallery_H8WFwP"
   ]
 }
