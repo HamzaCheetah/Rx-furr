@@ -31,12 +31,10 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "SHOP NOW",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "LEARN MORE",
-            "button_link_2": "shopify://blogs/news",
-            "button_style_secondary_2": false
+            "hero_btn_1_text": "Shop Now",
+            "hero_btn_1_link": "",
+            "hero_btn_2_text": "Learn More",
+            "hero_btn_2_link": ""
           }
         }
       },
@@ -59,37 +57,45 @@
         "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "custom_image_with_text_mWCpF4": {
+      "type": "custom-image-with-text",
+      "blocks": {
+        "list_item_pgGHgq": {
+          "type": "list_item",
+          "settings": {
+            "list_text": "Promotes Healthy Digestion – Supports gut balance and reduces digestive issues."
+          }
+        },
+        "list_item_fBWLU7": {
+          "type": "list_item",
+          "settings": {
+            "list_text": "Boosts Immunity – Strengthens natural defenses for a healthier pet."
+          }
+        },
+        "list_item_X7TPFa": {
+          "type": "list_item",
+          "settings": {
+            "list_text": "Easy to Use – Just sprinkle over food for hassle-free health benefits!"
+          }
+        }
+      },
+      "block_order": [
+        "list_item_pgGHgq",
+        "list_item_fBWLU7",
+        "list_item_X7TPFa"
+      ],
+      "name": "Image with Text & List",
       "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "image": "shopify://shop_images/Group_1171275897.png",
+        "heading_1": "WHY",
+        "heading_highlight": "CHOOSE",
+        "heading_2": "RX FURR PROBIOTIC POWDER?",
+        "description": "Rx Furr Probiotics support your pet’s digestion, immunity, and overall well-being. A simple daily addition to their diet for lasting benefits!"
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "custom_image_with_text_mWCpF4"
   ]
 }
